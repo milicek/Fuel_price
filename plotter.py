@@ -4,11 +4,10 @@ import seaborn as sns
 
 def show_diesel_chart():
     try:
-        df = pd.read_csv('ceny_nafty.csv')
-        
+        df = pd.read_csv('ceny_nafty_cr.csv')
+        df['datum'] = df['datum'].astype(str)
         plt.figure(figsize=(10, 6))
-        sns.lineplot(data=df, x='datum', y='cena', marker='o')
-        
+        sns.lineplot(data=df, x='obdobi_csu', y='cena', marker='o', sort=False)
         plt.title('Vývoj ceny nafty v čase')
         plt.xticks(rotation=45)
         plt.grid(True)
