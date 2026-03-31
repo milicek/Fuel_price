@@ -30,7 +30,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          # Původně: git add Lekce_6_cviceni/ceny_nafty_cr.csv
+          # Původně: git add ceny_nafty_cr.csv
           git add ceny_nafty_cr.csv
           git commit -m "Automatická aktualizace cen nafty" || exit 0
           git push
