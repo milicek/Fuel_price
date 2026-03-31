@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pandas requests
+          pip install pandas requests matplotlib
 
       - name: Run update script
         # Původně: run: python Lekce_6_cviceni/main.py
