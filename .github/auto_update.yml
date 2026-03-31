@@ -1,4 +1,4 @@
-name: Diesel Price Auto Update
+name: Finální uprava
 
 on:
   schedule:
