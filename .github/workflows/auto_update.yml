@@ -23,13 +23,14 @@ jobs:
           pip install pandas requests
 
       - name: Run update script
-        run: python Lekce_6_cviceni/main.py
-        # Pokud máš jinou cestu k main.py, uprav ji zde
+        # Původně: run: python Lekce_6_cviceni/main.py
+        run: python main.py
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add Lekce_6_cviceni/ceny_nafty_cr.csv
+          # Původně: git add Lekce_6_cviceni/ceny_nafty_cr.csv
+          git add ceny_nafty_cr.csv
           git commit -m "Automatická aktualizace cen nafty" || exit 0
           git push
